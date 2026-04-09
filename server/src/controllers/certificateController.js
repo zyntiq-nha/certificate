@@ -123,6 +123,13 @@ const verifyCertificate = async (req, res, next) => {
 
     const certificate = (intern.certificates || []).find((c) => c.certificateId === certificateId);
 
+    if (!certificate) {
+      return res.status(404).json({
+        status: "invalid",
+        message: "Certificate not found"
+      });
+    }
+
     return res.json({
       status: "valid",
       certificateId,

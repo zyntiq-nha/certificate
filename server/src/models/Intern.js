@@ -57,6 +57,6 @@ const internSchema = new mongoose.Schema(
 );
 
 internSchema.index({ email: 1, fullName: 1 });
-internSchema.index({ "certificates.certificateId": 1 }, { unique: true });
+internSchema.index({ "certificates.certificateId": 1 }, { unique: true, sparse: true });
 
 module.exports = mongoose.model("Intern", internSchema);

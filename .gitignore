@@ -5,13 +5,19 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.production
+
+# Vercel env reference file (contains real credentials)
+VERCEL_ENV_SET.env
 
 # Client/Server specific
 client/node_modules/
 client/.env
+client/.env.production
 client/dist/
 server/node_modules/
 server/.env
+server/.env.production
 
 # Logs
 logs
