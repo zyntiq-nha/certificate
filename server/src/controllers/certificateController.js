@@ -15,8 +15,8 @@ const getPublicBaseUrl = (req) => {
   return `${req.protocol}://${req.get("host")}`;
 };
 const getVerificationUrl = (req, certificateId, existingUrl) => {
-  if (existingUrl) return existingUrl;
-
+  // Ignore existingUrl if it exists because it might contain stale 'localhost' links from dev
+  // Prioritize the configured FRONTEND_BASE_URL
   const frontendBaseUrl = process.env.FRONTEND_BASE_URL;
   if (frontendBaseUrl) {
     return `${frontendBaseUrl.replace(/\/$/, "")}/verify/${certificateId}`;

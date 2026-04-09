@@ -30,7 +30,7 @@ Update `.env` values:
 ## 2. Create Admin
 
 ```bash
-npm run create:admin -- admin@zyntiq.com strongpassword123
+npm run create:admin -- admin@zyntiq.com strongpassword123  Admin@12345
 ```
 
 ## 3. Run
