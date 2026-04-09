@@ -1,5 +1,5 @@
-const app = require("../src/app");
-const connectDB = require("../src/config/db");
+const app = require("../server/src/app");
+const connectDB = require("../server/src/config/db");
 
 // Vercel Serverless Function entry point
 module.exports = async (req, res) => {
