@@ -16,7 +16,8 @@ const allowedOrigins = (process.env.CORS_ORIGINS || "")
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+      const isVercel = origin && (origin.endsWith(".vercel.app") || origin.includes("localhost"));
+      if (!origin || allowedOrigins.length === 0 || allowedOrigins.includes(origin) || isVercel) {
         return callback(null, true);
       }
       const error = new Error("CORS blocked for this origin");

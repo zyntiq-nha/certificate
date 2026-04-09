@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
 
-/**
- * Global is used here to maintain a cached connection across hot reloads
- * in development and lambda executions in production.
- */
 let cached = global.mongoose;
 
 if (!cached) {
@@ -27,6 +23,7 @@ const connectDB = async () => {
     };
 
     cached.promise = mongoose.connect(uri, opts).then((mongooseInstance) => {
+      console.log("New MongoDB connection established");
       return mongooseInstance;
     });
   }
@@ -35,6 +32,7 @@ const connectDB = async () => {
     cached.conn = await cached.promise;
   } catch (e) {
     cached.promise = null;
+    console.error("MongoDB Connection Error:", e);
     throw e;
   }
 
