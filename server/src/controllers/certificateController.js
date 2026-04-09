@@ -173,7 +173,7 @@ const generateCertificatePdf = async (req, res, next) => {
     res.setHeader("Content-Type", "application/pdf");
     res.setHeader(
       "Content-Disposition",
-      `inline; filename="${certificate.certificateId}.pdf"`
+      `attachment; filename="${certificate.certificateId}.pdf"`
     );
     return res.send(Buffer.from(pdfBytes));
   } catch (error) {
