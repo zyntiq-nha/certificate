@@ -2287,12 +2287,19 @@ th {
 }
 
 @media (max-width: 768px) {
-  .portal-topbar {
-    padding: 1rem 1.25rem;
+  .portal-nav-row-integrated {
+    padding: 1rem 1.25rem 0.5rem;
   }
 
-  .portal-content {
-    padding: 1.5rem 1.25rem;
+  .brand-portal-label, .brand-divider {
+    display: none;
+  }
+
+  .portal-identity-banner-integrated {
+    padding: 1rem 1.25rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
 
   .identity-left {
@@ -2300,24 +2307,40 @@ th {
   }
 
   .identity-avatar {
-    width: 52px;
-    height: 52px;
-    font-size: 1.4rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
   }
 
   .identity-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .identity-email {
+    font-size: 0.85rem;
   }
 
   .identity-right {
-    flex-direction: row;
-    align-items: center;
     width: 100%;
-    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  .identity-stat-card {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .identity-stat-value {
+    font-size: 1.6rem;
+  }
+
+  .portal-content {
+    padding: 1.5rem 1.25rem;
   }
 
   .portal-cert-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .portal-card-actions {
