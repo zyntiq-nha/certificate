@@ -9,6 +9,10 @@ module.exports = async (req, res) => {
     return app(req, res);
   } catch (error) {
     console.error("Vercel Function Error:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    res.status(500).json({ 
+      message: "Internal Server Error", 
+      errorDetail: error ? error.message : String(error),
+      hasDbUri: !!process.env.MONGODB_URI
+    });
   }
 };
