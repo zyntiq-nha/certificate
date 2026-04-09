@@ -176,12 +176,18 @@ const CertificatesPage = () => {
       {/* Unified Identity & Navigation Section */}
       {!loading && !error && (
         <div className="portal-profile-section">
-          <div className="portal-nav-row-integrated">
-            <Link to="/" className="portal-back-arrow" title="New Search">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <div className="portal-nav-row-integrated" style={{ justifyContent: "space-between" }}>
+            <Link to="/" className="brand-logo" style={{ textDecoration: "none" }}>
+              <img src="/black.png" alt="Zyntiq" className="brand-img" style={{ height: "30px" }} />
+              <div className="brand-divider" style={{ height: "16px" }}></div>
+              <span className="brand-portal-label" style={{ fontSize: "0.8rem", color: "#64748b" }}>Verification Portal</span>
+            </Link>
+            <Link to="/" className="portal-back-btn" title="New Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
               </svg>
+              New Search
             </Link>
           </div>
 

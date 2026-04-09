@@ -1642,8 +1642,8 @@ th {
 
 /* Unified Identity & Nav Section */
 .portal-profile-section {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #334155 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
   position: relative;
   overflow: hidden;
 }
@@ -1657,7 +1657,7 @@ th {
 }
 
 .portal-identity-banner-integrated {
-  padding: 0.5rem 3rem 1.5rem;
+  padding: 1rem 3rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1670,20 +1670,21 @@ th {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.4);
+  color: #475569;
   transition: all 0.2s;
-  padding: 4px;
+  padding: 6px;
   border-radius: 8px;
+  border: 1px solid transparent;
 }
 
 .portal-back-arrow:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.05);
+  color: #0f172a;
+  background: #f1f5f9;
+  border-color: #e2e8f0;
 }
 
 .portal-identity-banner {
-  /* Legacy/Detail Page support */
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #334155 100%);
+  background: #ffffff;
   padding: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -1691,7 +1692,7 @@ th {
   gap: 2rem;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .portal-profile-section::before {
@@ -1702,7 +1703,7 @@ th {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(15, 23, 42, 0.02);
   pointer-events: none;
 }
 
@@ -1714,7 +1715,7 @@ th {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(15, 23, 42, 0.015);
   pointer-events: none;
 }
 
@@ -1727,31 +1728,32 @@ th {
 }
 
 .identity-avatar {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #c8b870 0%, #a39050 100%);
-  color: #1a1208;
-  font-size: 1.4rem;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 1.6rem;
   font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  box-shadow: 0 0 0 3px rgba(200, 184, 112, 0.25), 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .identity-name {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
   margin: 0 0 0.1rem 0;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #0f172a;
 }
 
 .identity-email {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.95rem;
+  color: #64748b;
   margin: 0;
 }
 
@@ -1765,26 +1767,28 @@ th {
 
 .identity-stat-card {
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
   padding: 0.5rem 0;
-  text-align: left;
+  text-align: right;
 }
 
 .identity-stat-value {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1;
-  color: #c8b870;
+  color: #0f172a;
+  letter-spacing: -0.02em;
 }
 
 .identity-stat-label {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: #64748b;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-top: 0;
+  letter-spacing: 0.08em;
+  margin-top: 0.2rem;
 }
 
 .identity-badge {
@@ -1929,44 +1933,7 @@ th {
 }
 
 /* Header: logo | divider | org name */
-.cert-mockup--bp .cert-mockup__paper {
-  background: #0f172a; /* Deep navy nearly black */
-  color: #ffffff;
-  border: 1px solid #c8b870; /* Thin gold border to match others */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-}
-
-.cert-mockup--bp .cert-mockup__logo {
-  filter: brightness(0) invert(1);
-  opacity: 1;
-}
-
-.cert-mockup--bp .cert-mockup__org,
-.cert-mockup--bp .cert-mockup__presented,
-.cert-mockup--bp .cert-mockup__desc,
-.cert-mockup--bp .cert-mockup__footer-lbl {
-  color: rgba(255, 255, 255, 0.9); /* Higher contrast */
-}
-
-.cert-mockup--bp .cert-mockup__name {
-  color: #ffffff;
-  border-bottom-color: #c8b870; /* Gold underline */
-}
-
-.cert-mockup--bp .cert-mockup__footer-val {
-  color: #ffffff;
-}
-
-.cert-mockup--bp .cert-mockup__gold-line {
-  background: linear-gradient(to right, transparent, #c8b870, transparent);
-  opacity: 0.5;
-}
-
-.cert-mockup--bp .cert-mockup__type-title {
-  background: rgba(200, 184, 112, 0.2);
-  border-color: #c8b870;
-  color: #ffffff;
-}
+/* Remove dark BP styles completely so it falls back to the clean default design */
 
 .cert-mockup__header {
   display: flex;
