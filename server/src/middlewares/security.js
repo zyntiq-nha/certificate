@@ -1,6 +1,7 @@
 const REQUEST_WINDOW_MS = 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = Number(process.env.RATE_LIMIT_MAX || 120);
 const BUCKET_CLEANUP_THRESHOLD = 5000;
+const MAX_BUCKETS = Number(process.env.RATE_LIMIT_MAX_BUCKETS || 50000);
 
 const requestBuckets = new Map();
 let lastCleanupAt = Date.now();
@@ -33,6 +34,11 @@ const rateLimit = (req, res, next) => {
   const now = Date.now();
   cleanupBuckets(now);
   const ip = req.ip || req.socket?.remoteAddress || "unknown";
+  if (requestBuckets.size >= MAX_BUCKETS && !requestBuckets.has(ip)) {
+    return res.status(503).json({
+      message: "Server is busy. Please retry shortly."
+    });
+  }
   const bucket = requestBuckets.get(ip) || { count: 0, start: now };
 
   if (now - bucket.start > REQUEST_WINDOW_MS) {

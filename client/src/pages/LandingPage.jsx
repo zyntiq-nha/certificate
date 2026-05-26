@@ -44,14 +44,6 @@ const LandingPage = () => {
             <div className="brand-divider"></div>
             <span className="brand-portal-label">Verification Portal</span>
           </div>
-          <nav className="landing-nav">
-            <Link className="admin-access-btn" to="/admin/login" title="Admin Portal">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-              <span>Admin Login</span>
-            </Link>
-          </nav>
         </header>
 
         <main className="landing-main">

@@ -1,7 +1,7 @@
-import { api } from "./client";
+import { adminApiClient } from "./client";
 
 export const adminApi = {
   login(payload) {
-    return api.post("/admin/login", payload);
+    return adminApiClient.post("/admin/login", payload);
   }
 };
