@@ -6,5 +6,6 @@ export const CERT_TYPES = {
   ap: "Appreciation",
   ca: "Campus Ambassador",
   bl: "Best Leader",
-  bp: "Best Performer"
+  bp: "Best Performer",
+  fsd_2m: "Full Stack Developer (2 Month)"
 };

@@ -46,6 +46,14 @@ const templateConfig = {
       qrPos: { x: 400, y: 45, size: 70 },                  // Adjusted horizontally
     },
 
+    FSD_2M: {
+      file: "FSD_2M.pdf",
+      namePos: { x: 335, y: 320, size: 38, centered: true },
+      datePos: { x: 320, y: 97, size: 11, centered: false },
+      idPos: { x: 320, y: 76, size: 11, centered: false },
+      qrPos: { x: 480, y: 100, size: 70 },
+    },
+
     // TA Templates (Landscape)
     TA_1: {
       file: "TA1.pdf",
