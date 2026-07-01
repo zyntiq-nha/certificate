@@ -25,6 +25,8 @@ const TYPE_LABELS = {
   ta_2: "Talent Acquisition",
   ta_4: "Talent Acquisition",
   fsd_2m: "Full Stack Developer",
+  ma_2m: "Marketing",
+  bda_2m: "Business Development Associate",
 };
 
 const CertMockup = ({ cert, recipientName }) => {

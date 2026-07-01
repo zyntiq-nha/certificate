@@ -80,6 +80,23 @@ const templateConfig = {
       qrPos: { x: 400, y: 45, size: 70 },
     },
 
+    MA_2M: {
+      file: "MA_2M.pdf",
+      namePos: { x: 250, y: 310, size: 38, centered: false },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
+    BDA_2M: {
+      file: "BDA_2M.pdf",
+      namePos: { x: 250, y: 310, size: 38, centered: false },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
+
     // === PORTRAIT TEMPLATES (Height: 841.89) ===
 
     EX: {
