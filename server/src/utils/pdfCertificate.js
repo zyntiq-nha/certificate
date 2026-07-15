@@ -30,13 +30,18 @@ const getAdjustedFontSize = (text, font, initialSize, maxWidth) => {
 };
 
 /**
- * Draws text with optional centering
+ * Draws text with optional alignment ('left', 'center', 'right')
  */
 const drawText = (page, text, font, size, pos, color) => {
   let x = pos.x;
-  if (pos.centered) {
+  const alignment = pos.align || (pos.centered ? "center" : "left");
+  
+  if (alignment === "center") {
     const textWidth = font.widthOfTextAtSize(text, size);
     x = pos.x - (textWidth / 2);
+  } else if (alignment === "right") {
+    const textWidth = font.widthOfTextAtSize(text, size);
+    x = pos.x - textWidth;
   }
   
   page.drawText(text, {
@@ -116,8 +121,27 @@ const createCertificatePdf = async ({ fullName, certificate, verificationUrl }) 
   const textColor = rgb(textConfigColor.r, textConfigColor.g, textConfigColor.b);
 
   // 5. Overlay Dynamic Data
-  // Name (with auto-adjust for length)
-  const maxNameWidth = width * 0.75; // Allow name to take up to 75% of page width
+  // Name (with auto-adjust for length based on alignment position and boundaries)
+  const nameAlign = config.namePos.align || (config.namePos.centered ? "center" : "left");
+  const margin = config.namePos.margin !== undefined ? config.namePos.margin : 40;
+  
+  let maxNameWidth;
+  if (config.namePos.maxWidth) {
+    maxNameWidth = config.namePos.maxWidth;
+  } else if (nameAlign === "center") {
+    // Distance to closest edge * 2, minus margin to prevent hitting either edge
+    maxNameWidth = 2 * Math.min(config.namePos.x - margin, width - config.namePos.x - margin);
+  } else if (nameAlign === "right") {
+    // Distance from the right-aligned anchor to the left margin
+    maxNameWidth = config.namePos.x - margin;
+  } else {
+    // Distance from left-aligned anchor to the right margin
+    maxNameWidth = width - config.namePos.x - margin;
+  }
+  
+  // Safety check: ensure maxNameWidth is a positive number
+  maxNameWidth = Math.max(50, maxNameWidth);
+
   const adjustedNameSize = getAdjustedFontSize(fullName, titleFont, config.namePos.size, maxNameWidth);
   drawText(page, fullName, titleFont, adjustedNameSize, config.namePos, textColor);
 

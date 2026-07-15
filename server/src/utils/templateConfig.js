@@ -22,7 +22,7 @@ const templateConfig = {
 
     AP: {
       file: "AP.pdf",
-      namePos: { x: 290, y: 310, size: 38, centered: false }, // X:8.75cm, Y:8.42cm
+      namePos: { x: 420, y: 310, size: 38, align: "center" }, // X:8.75cm, Y:8.42cm
       titlePos: { x: 421, y: 220, size: 20, centered: true },
       datePos: { x: 125, y: 39, size: 12, centered: false },  // X:4.4cm, Y:18.9cm
       idPos: { x: 125, y: 15, size: 12, centered: false },    // Y extrapolated
@@ -31,7 +31,7 @@ const templateConfig = {
 
     BL: {
       file: "BL.pdf",
-      namePos: { x: 70, y: 303, size: 45, centered: false },  // X:1.93cm, Y:8.12cm
+      namePos: { x: 70, y: 303, size: 45, align: "center" },  // X:1.93cm, Y:8.12cm
       titlePos: { x: 421, y: 230, size: 20, centered: true },
       datePos: { x: 315, y: 55, size: 12, centered: false },  // X:10.64cm, Y:18.36cm
       idPos: { x: 315, y: 26, size: 12, centered: false },    // Y extrapolated
@@ -40,7 +40,7 @@ const templateConfig = {
 
     CA: {
       file: "CA.pdf",
-      namePos: { x: 421, y: 290, size: 38, centered: true }, // Centered under 'awarded to'
+      namePos: { x: 421, y: 290, size: 38, align: "center" }, // Centered under 'awarded to'
       datePos: { x: 650, y: 70, size: 11, centered: false }, // More right, higher than UID
       idPos: { x: 650, y: 43, size: 11, centered: false },   // Aligned right with Date
       qrPos: { x: 400, y: 45, size: 70 },                  // Adjusted horizontally
@@ -48,7 +48,7 @@ const templateConfig = {
 
     FSD_2M: {
       file: "FSD_2M.pdf",
-      namePos: { x: 335, y: 320, size: 38, centered: true },
+      namePos: { x: 335, y: 320, size: 38, align: "center" },
       datePos: { x: 320, y: 97, size: 11, centered: false },
       idPos: { x: 320, y: 76, size: 11, centered: false },
       qrPos: { x: 480, y: 100, size: 70 },
@@ -57,7 +57,7 @@ const templateConfig = {
     // TA Templates (Landscape)
     TA_1: {
       file: "TA1.pdf",
-      namePos: { x: 250, y: 310, size: 38, centered: false },
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
       titlePos: { x: 421, y: 230, size: 20, centered: true },
       datePos: { x: 705, y: 70, size: 12, centered: false },
       idPos: { x: 705, y: 43, size: 12, centered: false },
@@ -65,7 +65,7 @@ const templateConfig = {
     },
     TA_2: {
       file: "TA2.pdf",
-      namePos: { x: 250, y: 310, size: 38, centered: false },
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
       titlePos: { x: 421, y: 230, size: 20, centered: true },
       datePos: { x: 705, y: 70, size: 12, centered: false },
       idPos: { x: 705, y: 43, size: 12, centered: false },
@@ -73,7 +73,7 @@ const templateConfig = {
     },
     TA_4: {
       file: "TA4.pdf",
-      namePos: { x: 250, y: 310, size: 38, centered: false },
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
       titlePos: { x: 421, y: 230, size: 20, centered: true },
       datePos: { x: 705, y: 70, size: 12, centered: false },
       idPos: { x: 705, y: 43, size: 12, centered: false },
@@ -82,7 +82,7 @@ const templateConfig = {
 
     MA_2M: {
       file: "MA_2M.pdf",
-      namePos: { x: 250, y: 310, size: 38, centered: false },
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
       titlePos: { x: 421, y: 230, size: 20, centered: true },
       datePos: { x: 705, y: 70, size: 12, centered: false },
       idPos: { x: 705, y: 43, size: 12, centered: false },
@@ -90,7 +90,7 @@ const templateConfig = {
     },
     BDA_2M: {
       file: "BDA_2M.pdf",
-      namePos: { x: 250, y: 310, size: 38, centered: false },
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
       titlePos: { x: 421, y: 230, size: 20, centered: true },
       datePos: { x: 705, y: 70, size: 12, centered: false },
       idPos: { x: 705, y: 43, size: 12, centered: false },
@@ -102,7 +102,7 @@ const templateConfig = {
     EX: {
       file: "EX.pdf",
       isPortrait: true,
-      namePos: { x: 180, y: 500, size: 35, centered: false },   // X:1.96cm, Y:7.72cm
+      namePos: { x: 300, y: 500, size: 35, align: "center" },   // X:1.96cm, Y:7.72cm
       titlePos: { x: 298, y: 500, size: 20, centered: true },
       datePos: { x: 463, y: 54, size: 12, centered: false },  // X:10.95cm, Y:19.06cm
       idPos: { x: 463, y: 20, size: 12, centered: false },    // Y extrapolated
@@ -113,7 +113,7 @@ const templateConfig = {
       file: "BP.pdf",
       isPortrait: true,
       fontColor: { r: 1, g: 1, b: 1 },
-      namePos: { x: 80, y: 460, size: 36, centered: false },    // X:0.17cm, Y:8.56cm
+      namePos: { x: 50, y: 460, size: 36, align: "left" },    // X:0.17cm, Y:8.56cm
       titlePos: { x: 294, y: 480, size: 20, centered: true },
       datePos: { x: 118, y: 67, size: 12, centered: false },   // X:2.53cm, Y:18.75cm
       idPos: { x: 118, y: 33, size: 12, centered: false },     // Y extrapolated
@@ -124,7 +124,7 @@ const templateConfig = {
   default: {
     file: "EX.pdf",
     isPortrait: true,
-    namePos: { x: 56, y: 623, size: 28, centered: false },
+    namePos: { x: 56, y: 623, size: 28, align: "center" },
     titlePos: { x: 298, y: 500, size: 20, centered: true },
     datePos: { x: 310, y: 301, size: 12, centered: false },
     idPos: { x: 310, y: 281, size: 12, centered: false },
