@@ -79,6 +79,26 @@ const templateConfig = {
       idPos: { x: 705, y: 43, size: 12, centered: false },
       qrPos: { x: 400, y: 45, size: 70 },
     },
+    TA_6: {
+      file: "TA6.pdf",
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+      // Cover the hardcoded "4 month" text baked into the TA4.pdf template
+      // and replace it with "6 month".
+      // Coordinates are in PDF points (origin = bottom-left of landscape page).
+      textCorrections: [
+        {
+          coverRect: { x: 448, y: 188, width: 38, height: 13 }, // white box over "4 month"
+          text: "6 month",
+          x: 449,
+          y: 191,
+          size: 11,
+        }
+      ],
+    },
 
     MA_2M: {
       file: "MA_2M.pdf",

@@ -166,6 +166,29 @@ const createCertificatePdf = async ({ fullName, certificate, verificationUrl }) 
     height: qrSize
   });
 
+  // 7. Apply text corrections (cover baked-in template text and replace with new text)
+  if (Array.isArray(config.textCorrections) && config.textCorrections.length > 0) {
+    for (const correction of config.textCorrections) {
+      // Draw white rectangle to cover the original text
+      page.drawRectangle({
+        x: correction.coverRect.x,
+        y: correction.coverRect.y,
+        width: correction.coverRect.width,
+        height: correction.coverRect.height,
+        color: rgb(1, 1, 1), // white
+        opacity: 1,
+      });
+      // Draw the replacement text on top
+      page.drawText(correction.text, {
+        x: correction.x,
+        y: correction.y,
+        size: correction.size,
+        font: bodyFont,
+        color: textColor,
+      });
+    }
+  }
+
   return pdf.save();
 };
 
