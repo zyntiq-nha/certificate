@@ -116,6 +116,38 @@ const templateConfig = {
       idPos: { x: 705, y: 43, size: 12, centered: false },
       qrPos: { x: 400, y: 45, size: 70 },
     },
+    TASM_2: {
+      file: "TASM2.pdf",
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
+    TASM_4: {
+      file: "TASM4.pdf",
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
+    TASM2: {
+      file: "TASM2.pdf",
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
+    TASM4: {
+      file: "TASM4.pdf",
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
 
     // === PORTRAIT TEMPLATES (Height: 841.89) ===
 
