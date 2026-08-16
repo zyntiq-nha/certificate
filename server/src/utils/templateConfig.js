@@ -31,7 +31,7 @@ const templateConfig = {
 
     BL: {
       file: "BL.pdf",
-      namePos: { x: 70, y: 303, size: 45, align: "center" },  // X:1.93cm, Y:8.12cm
+      namePos: { x: 85, y: 303, size: 42, align: "left" },  // X shifted 15px right (70->85), align left for template layout
       titlePos: { x: 421, y: 230, size: 20, centered: true },
       datePos: { x: 315, y: 55, size: 12, centered: false },  // X:10.64cm, Y:18.36cm
       idPos: { x: 315, y: 26, size: 12, centered: false },    // Y extrapolated
