@@ -28,6 +28,7 @@ const TYPE_LABELS = {
   tasm_2: "Talent Acquisition & Marketing",
   tasm_4: "Talent Acquisition & Marketing",
   fsd_2m: "Full Stack Developer",
+  ma_1m: "Marketing",
   ma_2m: "Marketing",
   bda_2m: "Business Development Associate",
 };

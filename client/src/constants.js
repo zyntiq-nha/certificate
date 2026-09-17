@@ -9,6 +9,7 @@ export const CERT_TYPES = {
   bl: "Best Leader",
   bp: "Best Performer",
   fsd_2m: "Full Stack Developer (2 Month)",
+  ma_1m: "Marketing (1 Month)",
   ma_2m: "Marketing (2 Month)",
   bda_2m: "Business Development Associate (2 Month)",
   tasm_2: "TASM 2 Month",

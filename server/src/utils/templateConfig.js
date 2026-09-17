@@ -100,6 +100,23 @@ const templateConfig = {
       ],
     },
 
+    MA_1M: {
+      file: "MA_1M.pdf",
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
+    MA1M: {
+      file: "MA_1M.pdf",
+      namePos: { x: 380, y: 310, size: 38, align: "center" },
+      titlePos: { x: 421, y: 230, size: 20, centered: true },
+      datePos: { x: 705, y: 70, size: 12, centered: false },
+      idPos: { x: 705, y: 43, size: 12, centered: false },
+      qrPos: { x: 400, y: 45, size: 70 },
+    },
+
     MA_2M: {
       file: "MA_2M.pdf",
       namePos: { x: 380, y: 310, size: 38, align: "center" },
