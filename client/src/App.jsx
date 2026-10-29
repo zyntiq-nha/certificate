@@ -7,7 +7,7 @@ const LandingPage = lazy(() => import("./pages/LandingPage"));
 const CertificatesPage = lazy(() => import("./pages/CertificatesPage"));
 const CertificateDetailPage = lazy(() => import("./pages/CertificateDetailPage"));
 const VerifyPage = lazy(() => import("./pages/VerifyPage"));
-const ADMIN_PATH = (import.meta.env.VITE_ADMIN_PATH || "/team-admin").replace(/\/+$/, "");
+const ADMIN_PATH = (import.meta.env.VITE_ADMIN_PATH || "/tadmin").replace(/\/+$/, "");
 
 const App = () => {
   return (
