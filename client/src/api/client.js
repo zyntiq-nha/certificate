@@ -3,8 +3,8 @@ import { tokenStorage } from "../utils/storage";
 
 const PUBLIC_API_BASE_URL = import.meta.env.VITE_PUBLIC_API_BASE_URL
   || import.meta.env.VITE_API_BASE_URL
-  || "http://localhost:5000/api";
-const ADMIN_API_BASE_URL = import.meta.env.VITE_ADMIN_API_BASE_URL || "http://localhost:5000/admin-api";
+  || "/api";
+const ADMIN_API_BASE_URL = import.meta.env.VITE_ADMIN_API_BASE_URL || "/admin-api";
 
 const attachAuthHeader = (config) => {
   const token = tokenStorage.get();
